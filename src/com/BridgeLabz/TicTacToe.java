@@ -15,6 +15,7 @@ public class TicTacToe {
         System.out.println("Enter the letter X or o");
         char letter = input.next().charAt(0);
     }
+    //method to show the board to the player so player can move properly
     public static void printGameBoard(char[][] gameBoard){
         for(char[] row : gameBoard){
             for(char c : row){
