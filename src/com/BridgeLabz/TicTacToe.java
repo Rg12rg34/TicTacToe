@@ -17,7 +17,13 @@ public class TicTacToe {
         System.out.println("Enter the position between 1 to 9");
         int pos = input.nextInt();
         String user = input.nextLine();
-        placePiece(gameBoard,pos,"player");
+        int random = (int) (Math.random()*2);        // to check the toss to win
+        if(random == 0){
+            user = "player";
+        }
+        else
+            user = "CPU";
+        placePiece(gameBoard,pos,user);
     }
 
     //method to show the board to the player so player can move properly
@@ -106,3 +112,4 @@ public class TicTacToe {
         printGameBoard(gameBoard);
     }
 }
+
